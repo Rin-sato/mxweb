@@ -1,0 +1,534 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="theme-color" content="#000000">
+  <title>梦希操作系统-MengXiOS</title>
+  <meta name="description" content="梦希操作系统">
+  <meta name="keywords" content="梦希操作系统,MengXiOS">
+  <link href="styles/main.css" rel="stylesheet">
+  <link rel="stylesheet" type="text/css" href="styles/laba.css">
+  <link rel="stylesheet" type="text/css" href="styles/chunkun.css">
+  <link rel="stylesheet" type="text/css" href="styles/tanchuang.css">
+  <link rel="stylesheet" type="text/css" href="styles/dibujubao.css">
+  <link rel="stylesheet" type="text/css" href="styles/bootstrap.min.css">
+  <link rel="stylesheet" type="text/css" href="styles/main.css">
+  <link rel="stylesheet" type="text/css" href="styles/style.css">
+  <script charset="UTF-8" id="LA_COLLECT" src="https://sdk.51.la/js-sdk-pro.min.js"></script>
+      <!--鼠标特效文字开始-->
+      <script src="https://cdn.bootcdn.net/ajax/libs/jquery/3.6.0/jquery.js"></script>
+      <script type="text/javascript">
+          //定义获取词语下标
+          var a_idx = 0;
+          jQuery(document).ready(function($) {
+              //点击body时触发事件
+              $("body").click(function(e) {
+              //需要显示的词语
+              var a = new Array("富强","民主", "文明", "和谐","自由", "平等", "公正","法治", "爱国", "敬业","诚信", "友善");
+              //设置词语给span标签
+              var $i = $("<span/>").text(a[a_idx]);
+              //下标等于原来下标+1  余 词语总数
+              a_idx = (a_idx + 1)% a.length;
+              //获取鼠标指针的位置，分别相对于文档的左和右边缘。
+              //获取x和y的指针坐标
+              var x = e.pageX, y = e.pageY;
+              //在鼠标的指针的位置给$i定义的span标签添加css样式
+              $i.css({"z-index" : 999999999999999999999999999999999999999999999999999999999999999999999,
+                  "top" : y - 20,
+                  "left" : x,
+                  "position" : "absolute",
+                  "font-weight" : "bold",
+                  "color" : "#ff6651"
+                  });
+              //在body添加这个标签
+              $("body").append($i);
+                  //animate() 方法执行 CSS 属性集的自定义动画。
+                  $i.animate({
+                  //将原来的位置向上移动180
+                      "top" : y - 180,
+                          "opacity" : 0
+                   //1500动画的速度
+                  }, 1500, function() {
+                  //时间到了自动删除
+                      $i.remove();
+                  });
+              });
+          })
+              ;
+          </script>
+      <script>    
+          console.log("\n %c Made with love %c by Zero | zhsoft.asia 致力于造福百万极客！",
+        "color:#444;background:#eee;padding:5px 0;",
+        "color:#F8F8FF;background:#F4A7B9;padding:5px 0;");
+        console.log("\n %c ZhongHongSoftware | 中宏软件 %c 开源创新，共享未来 | 保持热爱，奔赴山海. ",
+        "color:#444;background:#eee;padding:5px 0;",
+        "color:#F8F8FF;background:#a7a7f1;padding:5px 0;");
+        console.log("\n %c 北京中宏软件技术开源社区版权所有 %c 窃取源码必承担法律责任，扒站/盗用者请自便 \n",
+        "color: #fadfa3; background: #030307; padding:5px 0; font-size:12px;",
+        "background: #fadfa3; padding:5px 0; font-size:12px;");</script> 
+  <!-- 顶部 -->
+  <div class="header">
+    <div class="navbar border-radius-12">
+      <div class="main">
+        <h1>
+          <a href="./index.html">
+            <!--<img src="image/1.png" class="logo" alt="梦希操作系统-MengXiOS">-->
+          </a>
+        </h1>
+        <div class="navigator-list"></div>
+      </div>
+      <div class="aciton-list">
+        <a class="item border-radius-8" href="http://zhsoft.asia/zpm">zpm软件列表</a>
+        <a class="item border-radius-8" href="http://zhsoft.asia/zpm/upload.php">zpm投递</a>
+        <a class="item black-button border-radius-8" href="https://www.123pan.com/s/TAF8Vv-hRAI.html">下载MengXiOS</a>
+      </div>
+    </div>
+  </div>
+  <!-- 正页 -->
+  <section class="position-relative hero-13 overflow-hidden pt-7 pt-lg-8 pb-5 hero-with-shapes">
+    <div class="container">
+      <div class="align-items-center text-center text-sm-start row">
+        <div class="col-lg-6">
+          <div class="mb-lg-0">
+            <h2 class="hero-title">
+              梦希操作系统<br>
+              稳定不失优雅的Linux<br>
+              <span id="text-container">
+                <span class="highlight highlight-success d-inline-block"></span>
+                <span class="typist-cursor highlight highlight-success d-inline-block"
+                  style="opacity: 0; visibility: visible; animation: 700ms ease 0ms infinite normal none running blink;">|</span>
+              </span>
+            </h2>
+            <p class="fs-18 text-muted pt-3">
+              一个基于桌面的Linux操作系统，基于开源的Debian内核开发，并适应amd64架构。它拥有美观的桌面环境，与桌面环境兼容的软件，以及统一的UI风格。MengXiOS
+              的目标是为用户提供豪华实用的桌面环境，以及在低性能硬件上的流畅体验。</p>
+            <div class="pt-3 pt-sm-5 mb-4 mb-lg-0">
+              <a href="https://www.123pan.com/s/TAF8Vv-hRAI.html" class="btn btn-secondary me-2"
+                data-toggle="smooth-scroll" target="_blank">立即下载 </a>
+              <a href="doc.html" class="btn btn-danger me-2" data-toggle="smooth-scroll" target="_blank">教程介绍 </a>
+              <a href="doc.html" class="btn btn-success me-2" data-toggle="smooth-scroll" target="_blank">使用文档 </a>
+              <p style="color: green; font-size: 15px;">在平衡稳定性的同时具有出色的稳定性和美观的界面</p>
+            </div>
+          </div>
+        </div>
+        <div class="hero-right col-lg-3 offset-lg-1">
+          <div class="img-container">
+            <div class="slider">
+              <div class="swiper swiper-initialized swiper-horizontal swiper-pointer-events">
+                <img id="my-image" src="image/logo.png" alt="" class="img-fluid d-block ms-auto rounded-lg">
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section class="py-lg-6 py-4 mt-0 coworking-1">
+    <div class="container">
+      <div class="align-items-center row">
+        <div class="col">
+          <div class="text-center">
+            <span class="badge-soft-info px-2 py-1 badge rounded-pill">保守统计</span>
+            <h1 class="display-5 fw-medium">简单的统计安心的数据</h1>
+            <p class="text-muted mx-auto w-75 mt-1">无需因陌生而胆怯，我眼里都是灰烬~</p>
+            <div data-aos="fade-up" class="mt-5 text-center row aos-init aos-animate">
+              <div class="mb-5 mb-sm-0 col-md-3 col-6">
+                <div class="display-3 fw-bold" data-target="cc-intercept">
+                  <span id="cc-intercept-value">1W+</span>
+                </div>
+                <p class="mt-1 mb-0">代码量</p>
+              </div>
+              <div class="mb-5 mb-sm-0 col-md-3 col-6">
+                <div class="display-3 fw-bold" data-target="outbound-traffic">
+                  <span id="outbound-traffic-value">100+</span>
+                </div>
+                <p class="mt-1 mb-0">运行天数</p>
+              </div>
+              <div class="mb-5 mb-sm-0 col-md-3 col-6">
+                <div class="display-3 fw-bold">
+                  <span>15+</span>
+                </div>
+                <p class="mt-1 mb-0">团队服务</p>
+              </div>
+              <div class="mb-5 mb-sm-0 col-md-3 col-6">
+                <div class="display-3 fw-bold" data-target="site-Count">
+                  <span id="site-count-value">2700+</span>
+                </div>
+                <p class="mt-1 mb-0">站点数量</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section class="my-lg-5 py-5 py-sm-7 bg-gradient2 position-relative aos-init aos-animate" data-aos="fade-up">
+    <div class="container">
+      <div class="row">
+        <div data-aos="fade-up" class="text-center col aos-init aos-animate">
+          <span class="badge-soft-primary px-2 py-1 badge rounded-pill">特点</span>
+          <h1 class="display-4 fw-semibold">为什么选择 梦希操作系统</h1>
+        </div>
+      </div>
+      <div class="mt-5 row">
+        <div data-aos="fade-up" data-duration="600" class="col-lg-4 aos-init aos-animate">
+          <div class="shadow-sm card">
+            <div class="p-2 card-body">
+              <div class="d-flex align-items-center">
+                <span
+                  class="bg-soft-primary avatar avatar-sm rounded-lg icon icon-with-bg icon-xs text-primary me-3 flex-shrink-0">
+                  <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                    stroke-linecap="round" stroke-linejoin="round" class="feather feather-users icon-dual-primary">
+                    <g>
+                      <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path>
+                      <circle cx="9" cy="7" r="4"></circle>
+                      <path d="M23 21v-2a4 4 0 0 0-3-3.87"></path>
+                      <path d="M16 3.13a4 4 0 0 1 0 7.75"></path>
+                    </g>
+                  </svg>
+                </span>
+                <div class="flex-grow-1">
+                  <h5 class="m-0">强大的团队</h5>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div data-aos="fade-up" data-duration="600" class="col-lg-4 aos-init aos-animate">
+          <div class="shadow-sm card">
+            <div class="p-2 card-body">
+              <div class="d-flex align-items-center">
+                <span
+                  class="bg-soft-primary avatar avatar-sm rounded-lg icon icon-with-bg icon-xs text-primary me-3 flex-shrink-0">
+                  <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                    stroke-linecap="round" stroke-linejoin="round" class="feather feather-check icon-dual-primary">
+                    <g>
+                      <polyline points="20 6 9 17 4 12"></polyline>
+                    </g>
+                  </svg>
+                </span>
+                <div class="flex-grow-1">
+                  <h5 class="m-0">持久稳定运行
+                  </h5>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div data-aos="fade-up" data-duration="600" class="col-lg-4 aos-init aos-animate">
+          <div class="shadow-sm card">
+            <div class="p-2 card-body">
+              <div class="d-flex align-items-center">
+                <span
+                  class="bg-soft-primary avatar avatar-sm rounded-lg icon icon-with-bg icon-xs text-primary me-3 flex-shrink-0">
+                  <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                    stroke-linecap="round" stroke-linejoin="round" class="feather feather-cpu icon-dual-primary">
+                    <g>
+                      <rect x="4" y="4" width="16" height="16" rx="2" ry="2"></rect>
+                      <rect x="9" y="9" width="6" height="6"></rect>
+                      <line x1="9" y1="1" x2="9" y2="4"></line>
+                      <line x1="15" y1="1" x2="15" y2="4"></line>
+                      <line x1="9" y1="20" x2="9" y2="23"></line>
+                      <line x1="15" y1="20" x2="15" y2="23"></line>
+                      <line x1="20" y1="9" x2="23" y2="9"></line>
+                      <line x1="20" y1="14" x2="23" y2="14"></line>
+                      <line x1="1" y1="9" x2="4" y2="9"></line>
+                      <line x1="1" y1="14" x2="4" y2="14"></line>
+                    </g>
+                  </svg>
+                </span>
+                <div class="flex-grow-1">
+                  <h5 class="m-0">独家自研的zpm软件包管理器</h5>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div data-aos="fade-up" data-duration="600" class="col-lg-4 aos-init aos-animate">
+          <div class="shadow-sm card">
+            <div class="p-2 card-body">
+              <div class="d-flex align-items-center">
+                <span
+                  class="bg-soft-primary avatar avatar-sm rounded-lg icon icon-with-bg icon-xs text-primary me-3 flex-shrink-0">
+                  <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                    stroke-linecap="round" stroke-linejoin="round" class="feather feather-home icon-dual-primary">
+                    <g>
+                      <path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path>
+                      <polyline points="9 22 9 12 15 12 15 22"></polyline>
+                    </g>
+                  </svg>
+                </span>
+                <div class="flex-grow-1">
+                  <h5 class="m-0">高活跃度群聊</h5>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div data-aos="fade-up" data-duration="600" class="col-lg-4 aos-init aos-animate">
+          <div class="shadow-sm card">
+            <div class="p-2 card-body">
+              <div class="d-flex align-items-center">
+                <span
+                  class="bg-soft-primary avatar avatar-sm rounded-lg icon icon-with-bg icon-xs text-primary me-3 flex-shrink-0">
+                  <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                    stroke-linecap="round" stroke-linejoin="round" class="feather feather-plus icon-dual-primary">
+                    <g>
+                      <line x1="12" y1="5" x2="12" y2="19"></line>
+                      <line x1="5" y1="12" x2="19" y2="12"></line>
+                    </g>
+                  </svg>
+                </span>
+                <div class="flex-grow-1">
+                  <h5 class="m-0">内置wine-control控制面板</h5>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div data-aos="fade-up" data-duration="600" class="col-lg-4 aos-init aos-animate">
+          <div class="shadow-sm card">
+            <div class="p-2 card-body">
+              <div class="d-flex align-items-center">
+                <span
+                  class="bg-soft-primary avatar avatar-sm rounded-lg icon icon-with-bg icon-xs text-primary me-3 flex-shrink-0">
+                  <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                    stroke-linecap="round" stroke-linejoin="round"
+                    class="feather feather-upload-cloud icon-dual-primary">
+                    <g>
+                      <polyline points="16 16 12 12 8 16"></polyline>
+                      <line x1="12" y1="12" x2="12" y2="21"></line>
+                      <path d="M20.39 18.39A5 5 0 0 0 18 9h-1.26A8 8 0 1 0 3 16.3"></path>
+                      <polyline points="16 16 12 12 8 16"></polyline>
+                    </g>
+                  </svg>
+                </span>
+                <div class="flex-grow-1">
+                  <h5 class="m-0">永久免费</h5>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section class="position-relative overflow-hidden py-6 features-3" id="products">
+    <div class="container">
+      <div id="poc" class="align-items-center row">
+        <div class="col-lg-5">
+          <div class="mb-lg-0 mb-4 aos-init aos-animate" data-aos="fade-right" data-aos-duration="600">
+            <span class="badge-soft-primary px-2 py-1 badge rounded-pill">独家自研的zpm软件包管理器</span>
+            <div id="apexml" class="align-items-center  row">
+              <div class="col-lg-8">
+                <h1 class="display-5 fw-medium mb-2">稳定可靠</h1>
+              </div>
+            </div>
+            <h5 class="fw-normal text-muted mx-auto mt-0 mb-4 pb-3">轻松地安装和更新软件</h5>
+            <div class="d-flex mb-3">
+              <div class="list-inline-item me-3 flex-shrink-0">
+                <span class="bg-soft-primary avatar avatar-sm rounded-lg icon icon-with-bg icon-xs text-primary">
+                  <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                    stroke-linecap="round" stroke-linejoin="round" class="feather feather-check icon-dual-primary">
+                    <g>
+                      <polyline points="20 6 9 17 4 12"></polyline>
+                    </g>
+                  </svg>
+                </span>
+              </div>
+              <div class="fw-medium fs-16 align-self-center flex-grow-1">让你的系统时刻保持最新！</div>
+            </div>
+            <div class="d-flex mb-3">
+              <div class="list-inline-item me-3 flex-shrink-0">
+                <span class="bg-soft-primary avatar avatar-sm rounded-lg icon icon-with-bg icon-xs text-primary">
+                  <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                    stroke-linecap="round" stroke-linejoin="round" class="feather feather-repeat icon-dual-primary">
+                    <g>
+                      <polyline points="17 1 21 5 17 9"></polyline>
+                      <path d="M3 11V9a4 4 0 0 1 4-4h14"></path>
+                      <polyline points="7 23 3 19 7 15"></polyline>
+                      <path d="M21 13v2a4 4 0 0 1-4 4H3"></path>
+                    </g>
+                  </svg>
+                </span>
+              </div>
+              <div class="fw-medium fs-16 align-self-center flex-grow-1">一次接入一劳永逸</div>
+            </div>
+            <div class="d-flex mb-3">
+              <div class="list-inline-item me-3 flex-shrink-0">
+                <span class="bg-soft-primary avatar avatar-sm rounded-lg icon icon-with-bg icon-xs text-primary">
+                  <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                    stroke-linecap="round" stroke-linejoin="round" class="feather feather-server icon-dual-primary">
+                    <g>
+                      <rect x="2" y="2" width="20" height="8" rx="2" ry="2"></rect>
+                      <rect x="2" y="14" width="20" height="8" rx="2" ry="2"></rect>
+                      <line x1="6" y1="6" x2="6.01" y2="6"></line>
+                      <line x1="6" y1="18" x2="6.01" y2="18"></line>
+                    </g>
+                  </svg>
+                </span>
+              </div>
+              <div class="fw-medium fs-16 align-self-center flex-grow-1">无需费心去寻找和下载软件包</div>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-6 offset-lg-1">
+          <img width="100%" height="315" src="image/zpm.png" style="border:5px solid white; border-radius: 10px;" />
+        </div>
+      </div>
+      <hr>
+      <br>
+      <div class="align-items-center row">
+        <div class="col-lg-5">
+          <div class="mb-lg-0 mb-4 aos-init aos-animate" data-aos="fade-right" data-aos-duration="600">
+            <span class="badge-soft-primary px-2 py-1 badge rounded-pill">内置wine-control控制面板</span>
+            <div class="align-items-center  row">
+              <div class="col-lg-8">
+                <h1 class="display-5 fw-medium mb-2">新兴势力</h1>
+              </div>
+            </div>
+            <h5 class="fw-normal text-muted mx-auto mt-0 mb-4 pb-3">新的势力开始都是高速发展</h5>
+            <div class="d-flex mb-3">
+              <div class="list-inline-item me-3 flex-shrink-0">
+                <span class="bg-soft-primary avatar avatar-sm rounded-lg icon icon-with-bg icon-xs text-primary">
+                  <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                    stroke-linecap="round" stroke-linejoin="round" class="feather feather-check icon-dual-primary">
+                    <g>
+                      <polyline points="20 6 9 17 4 12"></polyline>
+                    </g>
+                  </svg>
+                </span>
+              </div>
+              <div class="fw-medium fs-16 align-self-center flex-grow-1">方便地使用Windows软件</div>
+            </div>
+            <div class="d-flex mb-3">
+              <div class="list-inline-item me-3 flex-shrink-0">
+                <span class="bg-soft-primary avatar avatar-sm rounded-lg icon icon-with-bg icon-xs text-primary">
+                  <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                    stroke-linecap="round" stroke-linejoin="round" class="feather feather-repeat icon-dual-primary">
+                    <g>
+                      <polyline points="17 1 21 5 17 9"></polyline>
+                      <path d="M3 11V9a4 4 0 0 1 4-4h14"></path>
+                      <polyline points="7 23 3 19 7 15"></polyline>
+                      <path d="M21 13v2a4 4 0 0 1-4 4H3"></path>
+                    </g>
+                  </svg>
+                </span>
+              </div>
+              <div class="fw-medium fs-16 align-self-center flex-grow-1">不再需要为运行某些特定的Windows应用程序而苦恼</div>
+            </div>
+            <div class="d-flex mb-3">
+              <div class="list-inline-item me-3 flex-shrink-0">
+                <span class="bg-soft-primary avatar avatar-sm rounded-lg icon icon-with-bg icon-xs text-primary">
+                  <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                    stroke-linecap="round" stroke-linejoin="round" class="feather feather-server icon-dual-primary">
+                    <g>
+                      <rect x="2" y="2" width="20" height="8" rx="2" ry="2"></rect>
+                      <rect x="2" y="14" width="20" height="8" rx="2" ry="2"></rect>
+                      <line x1="6" y1="6" x2="6.01" y2="6"></line>
+                      <line x1="6" y1="18" x2="6.01" y2="18"></line>
+                    </g>
+                  </svg>
+                </span>
+              </div>
+              <div class="fw-medium fs-16 align-self-center flex-grow-1">不断更进的技术，打开一扇全新的大门</div>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-6 offset-lg-1">
+          <img width="100%" height="315" src="image/2.png" style="border:5px solid white; border-radius: 10px;" />
+        </div>
+      </div>
+      <hr>
+      <br>
+      <div class="align-items-center row">
+        <div class="col-lg-5">
+          <div class="mb-lg-0 mb-4 aos-init aos-animate" data-aos="fade-right" data-aos-duration="600">
+            <span class="badge-soft-primary px-2 py-1 badge rounded-pill">更快速、更流畅的系统体验</span>
+            <div class="align-items-center  row">
+              <div class="col-lg-8">
+                <h1 class="display-5 fw-medium mb-2">坚如磐石</h1>
+              </div>
+            </div>
+            <h5 class="fw-normal text-muted mx-auto mt-0 mb-4 pb-3">建立在坚如磐石的 Debian GNU/Linux 之上</h5>
+            <div class="d-flex mb-3">
+              <div class="list-inline-item me-3 flex-shrink-0">
+                <span class="bg-soft-primary avatar avatar-sm rounded-lg icon icon-with-bg icon-xs text-primary">
+                  <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                    stroke-linecap="round" stroke-linejoin="round" class="feather feather-check icon-dual-primary">
+                    <g>
+                      <polyline points="20 6 9 17 4 12"></polyline>
+                    </g>
+                  </svg>
+                </span>
+              </div>
+              <div class="fw-medium fs-16 align-self-center flex-grow-1">内核经过特殊调教</div>
+            </div>
+            <div class="d-flex mb-3">
+              <div class="list-inline-item me-3 flex-shrink-0">
+                <span class="bg-soft-primary avatar avatar-sm rounded-lg icon icon-with-bg icon-xs text-primary">
+                  <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                    stroke-linecap="round" stroke-linejoin="round" class="feather feather-repeat icon-dual-primary">
+                    <g>
+                      <polyline points="17 1 21 5 17 9"></polyline>
+                      <path d="M3 11V9a4 4 0 0 1 4-4h14"></path>
+                      <polyline points="7 23 3 19 7 15"></polyline>
+                      <path d="M21 13v2a4 4 0 0 1-4 4H3"></path>
+                    </g>
+                  </svg>
+                </span>
+              </div>
+              <div class="fw-medium fs-16 align-self-center flex-grow-1">性能释放达到了极致</div>
+            </div>
+            <div class="d-flex mb-3">
+              <div class="list-inline-item me-3 flex-shrink-0">
+                <span class="bg-soft-primary avatar avatar-sm rounded-lg icon icon-with-bg icon-xs text-primary">
+                  <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                    stroke-linecap="round" stroke-linejoin="round" class="feather feather-server icon-dual-primary">
+                    <g>
+                      <rect x="2" y="2" width="20" height="8" rx="2" ry="2"></rect>
+                      <rect x="2" y="14" width="20" height="8" rx="2" ry="2"></rect>
+                      <line x1="6" y1="6" x2="6.01" y2="6"></line>
+                      <line x1="6" y1="18" x2="6.01" y2="18"></line>
+                    </g>
+                  </svg>
+                </span>
+              </div>
+              <div class="fw-medium fs-16 align-self-center flex-grow-1">畅享数字世界</div>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-6 offset-lg-1">
+          <img width="100%" height="315" src="image/3.png" style="border:5px solid white; border-radius: 10px;" />
+        </div>
+      </div>
+    </div>
+    <div class="site-footer">
+      <img style="padding-top:2px; width: 30px; height: 30px;" src="image/jb.svg">
+      <a class="download" style="color:#000;" href="https://www.123pan.com/s/TAF8Vv-hRAI.html"
+        target="_blank">立即下载，畅享数字世界</a>
+    </br>  
+      <a class="copyright" style="color:#000;" href="#"
+        target="_blank">Copyright© 中宏软件/梦希操作系统开发团队</a>
+     <!-- <div id="popup" class="popup">
+        <div class="popup-content">
+          <span class="close">&times;</span>
+          <div class="popup-header">
+            <p style="color: red; font-size: 10px;">每小时弹出一次</p>
+            <h2>欢迎访问~</h2>
+            <p>梦希操作系统，根据国人审美和使用习惯设计，基于Debian
+              Linux开发，自主自研，不仅保留了Linux的稳定性和安全性，更融入了国人独特的审美观和使用习惯。无论你是学生、职场人士还是科技爱好者，梦希操作系统都能满足你对操作系统的各种需求。</p>
+            <div class="buttons">
+              <a href="xxxxxxxxxxxxxx" class="qq-group">QQ群</a>
+              <a href="https://zhsoft.asia/" class="contact-us">中宏软件</a>
+            </div>-->
+          </div>
+        </div>
+        <!--<script src="scripts/laba.js"></script>-->
+        <script src="scripts/tanchuang.js"></script>
+        <script src="scripts/yujubianhua.js"></script>
+        </body>
+
+</html>
